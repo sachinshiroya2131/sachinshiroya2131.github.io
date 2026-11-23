@@ -50,6 +50,11 @@
   .btn.ghost{border:1px solid var(--line);color:var(--text)}
   .btn.ghost:hover{border-color:var(--muted);transform:translateY(-2px)}
 
+  .hero-grid{display:grid;grid-template-columns:1.4fr 1fr;gap:40px;align-items:center}
+  .photo{position:relative;justify-self:center;width:100%;max-width:380px}
+  .photo::before{content:"";position:absolute;left:6%;right:6%;top:16%;bottom:0;border-radius:200px 200px 24px 24px;background:linear-gradient(165deg,rgba(255,107,61,.32),rgba(255,181,71,.08) 75%);border:1px solid rgba(255,107,61,.3)}
+  .photo img{position:relative;display:block;width:100%;height:auto;-webkit-mask-image:linear-gradient(to bottom,#000 82%,transparent);mask-image:linear-gradient(to bottom,#000 82%,transparent)}
+
   .stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:70px}
   .stat{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:22px}
   .stat b{display:block;font-family:"Space Grotesk";font-size:32px;color:var(--text)}
@@ -131,6 +136,8 @@
     .links.open{display:flex}
     .links a{padding:16px 24px;border-top:1px solid var(--line)}
     .menu-btn{display:block}
+    .hero-grid{grid-template-columns:1fr}
+    .photo{max-width:260px;order:-1;justify-self:start}
     .stats{grid-template-columns:repeat(2,1fr)}
     .about-grid,.projects,.edu,.cards{grid-template-columns:1fr}
     .hero{padding:80px 0 60px}
@@ -157,6 +164,8 @@
 
 <header class="hero" id="top">
   <div class="wrap">
+    <div class="hero-grid">
+    <div>
     <div class="tag"><span class="dot"></span> Full Stack Developer (MERN &amp; MEAN) at Encodedots</div>
     <h1>Hi, I'm Sachin.<br>I build <em>scalable web &amp; mobile</em> products.</h1>
     <p class="stack-line mono">Laravel · PHP · MERN · MEAN · Flutter</p>
@@ -165,6 +174,9 @@
       <a href="#projects" class="btn primary">View my work →</a>
       <a href="mailto:sachinshiroya2131@gmail.com" class="btn ghost">Get in touch</a>
       <a href="SachinKumar%20Resume.pdf" class="btn ghost" download="Sachin_Shiroya_Resume.pdf">Download resume</a>
+    </div>
+    </div>
+    <div class="photo"><img src="sachinkumar.png" alt="Sachin Shiroya" width="719" height="1091"></div>
     </div>
     <div class="stats">
       <div class="stat"><b>12+</b><span>Years of experience</span></div>
